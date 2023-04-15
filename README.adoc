@@ -1,1 +1,16 @@
 = Mhasck
+
+== Bash script
+
+To add curly brace to a script variable
+
+[,diff]
+----
+- echo $MY_VARIABLE
++ echo ${MY_VARIABLE}
+----
+
+[,bash]
+----
+sed -i 's/$\([[:alpha:]_]\+\)/${\1}/g' script.sh
+----
